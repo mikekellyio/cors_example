@@ -1,5 +1,11 @@
 CorsExample::Application.routes.draw do
   resources :widgets
+
+  namespace :api do
+    namespace :v1 do
+      resources :widgets
+    end
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
