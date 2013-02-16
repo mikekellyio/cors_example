@@ -68,7 +68,7 @@ module CorsExample
     config.middleware.insert_before Warden::Manager, Rack::Cors do
         allow do
           origins '*'
-          resource '/api/v1/widgets/*', 
+          resource '/api/v1/widgets', 
             :methods => [:get, :post, :options],
             :headers => ['Origin', 'Accept', 'Content-Type','X-Requested-With', 'X-CSRF-Token', 'x-requested-by']
           # resource '*', 
